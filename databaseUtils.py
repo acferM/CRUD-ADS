@@ -9,7 +9,8 @@ def init_database():
     with open(DATABASE_FILENAME, 'w') as database_file:
         json.dump({
             "animals": {},
-            "shelter": {}
+            "shelter": {},
+            "adopters": {}
         }, database_file, indent=FILE_INDENTATION)
 
 def get_database():
