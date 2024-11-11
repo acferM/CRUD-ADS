@@ -8,7 +8,8 @@ FILE_INDENTATION = 2
 def init_database():
     with open(DATABASE_FILENAME, 'w') as database_file:
         json.dump({
-            "animals": {}
+            "animals": {},
+            "shelter": {}
         }, database_file, indent=FILE_INDENTATION)
 
 def get_database():
