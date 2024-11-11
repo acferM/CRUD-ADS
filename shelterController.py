@@ -22,7 +22,7 @@ def list_shelter():
         print(f'telefone: {shelter["telefone"]}')
         print(f'email: {shelter["email"]}')
         print(f'capacidade: {shelter["capacidade"]}')
-        print('-' * 20)
+        print('-' * 40)
 
 def update_shelter(id, shelter):
     database = databaseUtils.get_database()

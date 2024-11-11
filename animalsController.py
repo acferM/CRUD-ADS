@@ -18,8 +18,14 @@ def list_animals():
 
         print(f'id: {animal_id}')
         print(f'name: {animal["name"]}')
+        print(f'especie: {animal["especie"]}')
         print(f'race: {animal["race"]}')
-        print('-' * 20)
+        print(f'age: {animal["age"]}')
+        print(f'personalidade: {animal["personalidade"]}')
+        print(f'castrado: {animal["castrado"]}')
+        print(f'abrigo_id: {animal["abrigo_id"]}')
+        print(f'foto: {animal["foto"]}')
+        print('-' * 40)
 
 def update_animal(id, animal):
     database = databaseUtils.get_database()

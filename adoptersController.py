@@ -22,7 +22,7 @@ def list_adopters():
         print(f'telefone: {adopters["telefone"]}')
         print(f'email: {adopters["email"]}')
         print(f'personalidade_desejada: {adopters["personalidade_desejada"]}')
-        print('-' * 20)
+        print('-' * 40)
 
 def update_adopters(id, adopters):
     database = databaseUtils.get_database()
