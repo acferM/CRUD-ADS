@@ -207,7 +207,7 @@ def sugerir_correspondencias():
                 "personalidade_desejada"]:
                 correspondencias_encontradas = True
                 print(
-                    f"- Animal: {animal['name']} | Espécie: {animal['especie']} | Raça: {animal['race']} | Personalidade: {animal['personalidade']} | Abrigo: {abrigo['name']}")
+                    f"- Animal: {animal['name']} | Espécie: {animal['especie']} | Raça: {animal['race']} | Personalidade: {animal['personalidade']} | Abrigo: {abrigo['name']} | foto: {animal['foto']}")
 
         if not correspondencias_encontradas:
             print("Nenhuma correspondência encontrada para este adotante.")
