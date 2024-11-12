@@ -17,8 +17,8 @@ def list_adopters():
         adopters = database['adopters'][adopters_id]
 
         print(f'id: {adopters_id}')
-        print(f'name: {adopters["name"]}')
-        print(f'city: {adopters["city"]}')
+        print(f'nome: {adopters["nome"]}')
+        print(f'cidade: {adopters["cidade"]}')
         print(f'telefone: {adopters["telefone"]}')
         print(f'email: {adopters["email"]}')
         print(f'personalidade_desejada: {adopters["personalidade_desejada"]}')

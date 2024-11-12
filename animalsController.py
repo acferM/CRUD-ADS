@@ -17,10 +17,10 @@ def list_animals():
         animal = database['animals'][animal_id]
 
         print(f'id: {animal_id}')
-        print(f'name: {animal["name"]}')
+        print(f'nome: {animal["nome"]}')
         print(f'especie: {animal["especie"]}')
-        print(f'race: {animal["race"]}')
-        print(f'age: {animal["age"]}')
+        print(f'raça: {animal["raça"]}')
+        print(f'idade: {animal["idade"]}')
         print(f'personalidade: {animal["personalidade"]}')
         print(f'castrado: {animal["castrado"]}')
         print(f'abrigo_id: {animal["abrigo_id"]}')
