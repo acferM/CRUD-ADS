@@ -17,8 +17,8 @@ def list_shelter():
         shelter = database['shelter'][shelter_id]
 
         print(f'id: {shelter_id}')
-        print(f'name: {shelter["name"]}')
-        print(f'city: {shelter["city"]}')
+        print(f'nome: {shelter["nome"]}')
+        print(f'cidade: {shelter["cidade"]}')
         print(f'telefone: {shelter["telefone"]}')
         print(f'email: {shelter["email"]}')
         print(f'capacidade: {shelter["capacidade"]}')

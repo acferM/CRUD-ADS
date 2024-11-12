@@ -64,10 +64,10 @@ def menu_animais():
 
         if opcao == '1':
             animal = {
-                "name": input("Nome do animal: "),
+                "nome": input("Nome do animal: "),
                 "especie": input("Espécie do animal: "),
-                "race": input("Raça do animal: "),
-                "age": input("Idade do animal: "),
+                "raça": input("Raça do animal: "),
+                "idade": input("Idade do animal: "),
                 "personalidade": selecionar_personalidade(),
                 "castrado": input("Castrado: (S/N) ").strip().upper() == "S",
                 "abrigo_id": input("ID do abrigo do animal: "),
@@ -79,10 +79,10 @@ def menu_animais():
         elif opcao == '3':
             id = input("Digite o ID do animal que deseja atualizar: ")
             animal = {
-                "name": input("Nome do animal: "),
+                "nome": input("Nome do animal: "),
                 "especie": input("Espécie do animal: "),
-                "race": input("Raça do animal: "),
-                "age": input("Idade do animal: "),
+                "raça": input("Raça do animal: "),
+                "idade": input("Idade do animal: "),
                 "personalidade": selecionar_personalidade(),
                 "castrado": input("Castrado: (S/N) ").strip().upper() == "S",
                 "abrigo_id": input("ID do abrigo do animal: "),
@@ -109,8 +109,8 @@ def menu_adotantes():
 
         if opcao == '1':
             adotante = {
-                "name": input("Nome do adotante: "),
-                "city": input("Cidade do adotante: "),
+                "nome": input("Nome do adotante: "),
+                "cidade": input("Cidade do adotante: "),
                 "telefone": input("Telefone do adotante: "),
                 "email": input("E-mail do adotante: "),
                 "personalidade_desejada": selecionar_personalidade()
@@ -121,8 +121,8 @@ def menu_adotantes():
         elif opcao == '3':
             id = input("Digite o ID do adotante que deseja atualizar: ")
             adotante = {
-                "name": input("Novo nome do adotante: "),
-                "city": input("Nova cidade do adotante: "),
+                "nome": input("Novo nome do adotante: "),
+                "cidade": input("Nova cidade do adotante: "),
                 "telefone": input("Novo telefone do adotante: "),
                 "email": input("Novo e-mail do adotante: "),
                 "personalidade_desejada": selecionar_personalidade()
@@ -148,8 +148,8 @@ def menu_abrigos():
 
         if opcao == '1':
             abrigo = {
-                "name": input("Nome do abrigo: "),
-                "city": input("Cidade do abrigo: "),
+                "nome": input("Nome do abrigo: "),
+                "cidade": input("Cidade do abrigo: "),
                 "telefone": input("Telefone do abrigo: "),
                 "email": input("E-mail do abrigo: "),
                 "capacidade": int(input("Capacidade máxima do abrigo: "))
@@ -160,8 +160,8 @@ def menu_abrigos():
         elif opcao == '3':
             id = input("Digite o ID do abrigo que deseja atualizar: ")
             abrigo = {
-                "name": input("Novo nome do abrigo: "),
-                "city": input("Nova cidade do abrigo: "),
+                "nome": input("Novo nome do abrigo: "),
+                "cidade": input("Nova cidade do abrigo: "),
                 "telefone": input("Novo telefone do abrigo: "),
                 "email": input("Novo e-mail do abrigo: "),
                 "capacidade": int(input("Nova capacidade do abrigo: "))
@@ -196,18 +196,18 @@ def sugerir_correspondencias():
 
     for adotante_id, adotante in adotantes.items():
         print(
-            f"\nSugestões para o adotante {adotante['name']} (Cidade: {adotante['city']}, Personalidade desejada: {adotante['personalidade_desejada']}):")
+            f"\nSugestões para o adotante {adotante['nome']} (Cidade: {adotante['cidade']}, Personalidade desejada: {adotante['personalidade_desejada']}):")
         correspondencias_encontradas = False
 
         for animal_id, animal in animais.items():
             abrigo_id = animal.get("abrigo_id")
             abrigo = abrigos.get(abrigo_id, {})
 
-            if abrigo and abrigo.get("city") == adotante["city"] and animal["personalidade"] == adotante[
+            if abrigo and abrigo.get("cidade") == adotante["cidade"] and animal["personalidade"] == adotante[
                 "personalidade_desejada"]:
                 correspondencias_encontradas = True
                 print(
-                    f"- Animal: {animal['name']} | Espécie: {animal['especie']} | Raça: {animal['race']} | Personalidade: {animal['personalidade']} | Abrigo: {abrigo['name']} | foto: {animal['foto']}")
+                    f"- Animal: {animal['nome']} | Espécie: {animal['especie']} | Raça: {animal['raça']} | Personalidade: {animal['personalidade']} | Abrigo: {abrigo['nome']} | foto: {animal['foto']}")
 
         if not correspondencias_encontradas:
             print("Nenhuma correspondência encontrada para este adotante.")
