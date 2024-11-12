@@ -1,7 +1,6 @@
 import databaseUtils
 import uuid
 
-
 def create_adopters(adopters):
     database = databaseUtils.get_database()
 
